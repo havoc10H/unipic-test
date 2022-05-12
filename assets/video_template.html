@@ -1,0 +1,27 @@
+<html>
+<head>
+       <title>Picture from NASA</title>
+</head>
+<body>
+<form id="myform" action="http://127.0.0.1:8080/api/v1/pic" method="get">
+	<div>
+		Title: {{.Title}}
+	</div>
+	<div>	
+		Video: <iframe src="{{.URL}}" width="1000" height="800"></iframe>
+	</div>
+	<div>
+		Copyright: {{.CopyRight}}
+	</div>
+	<div>
+		Explanation: {{.Explanation}}
+	</div>
+	<div>
+		Date: <input type="date" id="date" name="date">
+	</div>
+	<div>
+    	<input type="submit" value="Get Picture" />
+	</div>
+</form>
+</body>
+</html>

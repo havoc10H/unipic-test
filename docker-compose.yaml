@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  unipic:
+    image: golang:latest
+    volumes:
+      - ./:/usr/src/unipic
+    working_dir: /usr/src/unipic
+    environment:
+      - NASA_API_KEY=RhTN8L6c61HO2zgRrJUeQyoNp8gchVoZMN2MiSz6
+    ports:
+      - 8080:8080
+    command: bash -c "cd /usr/src/unipic/ && go build && ./unipic"
+  redis:
+    image: redis:alpine
